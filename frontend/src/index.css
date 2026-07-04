@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+  --bg: #f7f4ed;
+  --surface: rgba(255, 251, 245, 0.92);
+  --surface-strong: rgba(239, 231, 217, 0.72);
+  --surface-muted: rgba(222, 212, 194, 0.56);
+  --shell-sidebar: #12343b;
+  --shell-sidebar-strong: #0f2c32;
+  --shell-header: rgba(247, 244, 237, 0.9);
+  --shell-header-strong: rgba(230, 222, 209, 0.92);
+  --border: rgba(24, 52, 59, 0.12);
+  --border-strong: rgba(24, 52, 59, 0.22);
+  --text: #17343a;
+  --muted: #647a79;
+  --accent: #2e6f95;
+  --accent-soft: #e8f1f5;
+  --ok: #668c67;
+  --shadow: 0 16px 40px rgba(33, 52, 58, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(1200px 520px at 0% -10%, rgba(46, 111, 149, 0.14), transparent 68%),
+    radial-gradient(900px 480px at 100% 0%, rgba(223, 175, 108, 0.18), transparent 72%),
+    linear-gradient(180deg, rgba(255, 250, 244, 0.66), rgba(247, 244, 237, 0.95)),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+button {
+  font: inherit;
+  border: 1px solid rgba(46, 111, 149, 0.3);
+  border-radius: 12px;
+  background: rgba(46, 111, 149, 0.08);
+  color: var(--accent);
+  padding: 0.62rem 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+button:hover {
+  background: rgba(46, 111, 149, 0.14);
+  border-color: rgba(46, 111, 149, 0.46);
+}
+
+input, textarea, select {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255, 251, 245, 0.94);
+  color: var(--text);
+  padding: 0.64rem 0.72rem;
+  font: inherit;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.58);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted);
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(46, 111, 149, 0.4);
+  outline-offset: 2px;
+}

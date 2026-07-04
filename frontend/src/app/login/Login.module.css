@@ -1,0 +1,89 @@
+.authPage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background:
+    radial-gradient(1000px 500px at 5% -10%, rgba(64, 123, 189, 0.2), transparent 70%),
+    radial-gradient(700px 380px at 90% 0%, rgba(34, 161, 188, 0.14), transparent 70%),
+    var(--bg);
+}
+
+.card {
+  width: min(430px, 100%);
+  background: linear-gradient(180deg, rgba(22, 34, 48, 0.95), rgba(16, 25, 36, 0.98));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  margin-bottom: 0.9rem;
+}
+
+.brandName {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+.brandTag {
+  margin: 0.22rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.subtitle {
+  margin: 0.35rem 0 1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.action {
+  margin-top: 0.45rem;
+}
+
+.hint {
+  margin-top: 0.95rem;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.switch {
+  margin-top: 0.6rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.switch a {
+  color: var(--accent-soft);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}

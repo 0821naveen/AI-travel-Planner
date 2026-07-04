@@ -1,0 +1,7 @@
+.exportPanel {
+  background: linear-gradient(180deg, rgba(30, 48, 69, 0.35), rgba(23, 35, 49, 0.7));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 0;
+}

@@ -1,0 +1,85 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: travel_planner
+      POSTGRES_USER: travel_planner
+      POSTGRES_PASSWORD: travel_planner
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U travel_planner -d travel_planner"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+    env_file:
+      - ./backend/.env.dev
+      - ./backend/.env
+    environment:
+      APP__ENVIRONMENT: dev
+      DATABASE__URL: postgresql+psycopg://travel_planner:travel_planner@postgres:5432/travel_planner
+      REDIS__URL: redis://redis:6379/0
+      SECURITY__ENABLED: "false"
+      OPENAI_MODEL: gpt-4o-mini
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "alembic upgrade head &&
+      python -m uvicorn src.main:app --host 0.0.0.0 --port 8000"
+
+  worker:
+    build:
+      context: ./backend
+    env_file:
+      - ./backend/.env.dev
+      - ./backend/.env
+    environment:
+      APP__ENVIRONMENT: dev
+      DATABASE__URL: postgresql+psycopg://travel_planner:travel_planner@postgres:5432/travel_planner
+      REDIS__URL: redis://redis:6379/0
+      SECURITY__ENABLED: "false"
+      OPENAI_MODEL: gpt-4o-mini
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: >
+      sh -c "rq worker travel-planner-runs --url redis://redis:6379/0"
+
+  frontend:
+    build:
+      context: ./frontend
+    environment:
+      HOST: 0.0.0.0
+      REACT_APP_API_BASE_URL: http://localhost:8000
+      WDS_SOCKET_PORT: 3000
+    depends_on:
+      backend:
+        condition: service_started
+    ports:
+      - "3000:3000"
+
+volumes:
+  postgres_data:

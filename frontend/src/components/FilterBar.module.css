@@ -1,0 +1,10 @@
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: linear-gradient(180deg, rgba(30, 48, 69, 0.35), rgba(23, 35, 49, 0.6));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 0;
+}

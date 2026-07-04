@@ -1,0 +1,29 @@
+{
+  "prompt_hashes": {
+    "budget_developer_prompt": "788de8f2454389ad6be4b4e63fcd73954547579370c17d4f93faeb4c4d065679",
+    "budget_prompt_template": "28fea0c33dc15d024e1c45bd66891af325f41ca0bd3d402df3585ce9487623f8",
+    "destination_developer_prompt": "9f0bb49856642440bd3946274538329c54c5d77189ce8e3e240af21817d5b9ce",
+    "destination_prompt_template": "9ad8e24995afed6ddff21ba2c0748f92237d155f4b373b31d77c7a8623ee4be5",
+    "food_developer_prompt": "ac246358eaee1d0b14acb11f66c630ea7f137da25e9696f02dd2c9a6e339abe2",
+    "itinerary_developer_prompt": "42d993afb52da8bfd9e7486058ad40308c703ef0a30b6ac777deba0f435c1dda",
+    "itinerary_prompt_template": "c571dc080e7db0cc961d095c2cabe760ae6e4f8c0c6b874adb1f305ccedc0643",
+    "review_developer_prompt": "724fae08ae2a19389646ab778e3c60a957eacfba11e61a17f8966239874880cc",
+    "safety_developer_prompt": "1d8309f4f4f38e79bfc23cbc9cef3d4a2b311bb05127dbf8e9d522ff3ddf86d5",
+    "stay_developer_prompt": "4e08f7961b49ee31f9451217293d9c70a2a1b7cba1fad6a8bd90ac530d42a60d",
+    "transport_developer_prompt": "c04fe475d6fb7127316c2ecd5cd70676189822a26145ee89848593edf608265e"
+  },
+  "workflow_hash": "fa2c6de1cf70fc36e7cb1e81b6d79768a86b8a4e1808e493f0afb2a0b4a5fb00",
+  "workflow_steps": [
+    "clarification_validator",
+    "research_signal_agent",
+    "destination_research_agent",
+    "itinerary_planning_agent",
+    "stay_recommendation_agent",
+    "local_transport_agent",
+    "food_recommendation_agent",
+    "budget_optimization_agent",
+    "solo_women_safety_advisor_agent",
+    "review_and_consistency_agent",
+    "governance_gate_agent"
+  ]
+}

@@ -1,0 +1,35 @@
+.card {
+  background: linear-gradient(180deg, rgba(255, 251, 245, 0.94), rgba(249, 244, 236, 0.98));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.2rem 1.25rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 0;
+  backdrop-filter: blur(10px);
+}
+
+.default {
+  background: linear-gradient(180deg, rgba(255, 251, 245, 0.96), rgba(247, 241, 232, 0.98));
+  border-color: var(--border);
+}
+
+.insight {
+  background: linear-gradient(180deg, rgba(244, 249, 251, 0.96), rgba(233, 242, 245, 0.98));
+  border-color: rgba(46, 111, 149, 0.16);
+}
+
+.caution {
+  background: linear-gradient(180deg, rgba(252, 245, 236, 0.96), rgba(245, 233, 216, 0.98));
+  border-color: rgba(223, 175, 108, 0.34);
+}
+
+.review {
+  background: linear-gradient(180deg, rgba(245, 248, 245, 0.96), rgba(233, 239, 232, 0.98));
+  border-color: rgba(102, 140, 103, 0.2);
+}
+
+.metric {
+  background: linear-gradient(180deg, rgba(248, 251, 253, 0.98), rgba(236, 243, 247, 0.98));
+  border-color: rgba(46, 111, 149, 0.18);
+  box-shadow: 0 20px 34px rgba(33, 52, 58, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}

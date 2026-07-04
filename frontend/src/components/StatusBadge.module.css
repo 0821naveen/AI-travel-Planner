@@ -1,0 +1,19 @@
+.badge {
+  display: inline-block;
+  padding: 0.24em 0.65em;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: var(--surface-muted);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  text-transform: capitalize;
+}
+.active { background: rgba(134, 183, 255, 0.2); color: var(--accent-soft); }
+.awaiting { background: rgba(155, 172, 190, 0.2); color: var(--muted); }
+.review { background: rgba(134, 183, 255, 0.28); color: var(--accent-soft); }
+.exported { background: rgba(155, 172, 190, 0.15); color: var(--muted); }
+.complete { background: rgba(134, 183, 255, 0.2); color: var(--accent-soft); }
+.skipped { background: var(--surface-muted); color: var(--muted); }
+.waiting { background: var(--surface-muted); color: var(--muted); }

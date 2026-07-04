@@ -1,0 +1,78 @@
+.shell {
+  width: 100%;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(21, 29, 42, 0.98), rgba(15, 22, 33, 0.98)),
+    #111723;
+  border: 1px solid rgba(195, 210, 235, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 24px 48px rgba(5, 9, 16, 0.22);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.label {
+  color: rgba(228, 236, 247, 0.46);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.email {
+  color: rgba(245, 248, 255, 0.9);
+  font-size: 1rem;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.24rem 0.58rem;
+  border-radius: 999px;
+  background: rgba(135, 126, 227, 0.18);
+  border: 1px solid rgba(161, 154, 238, 0.16);
+  color: #f6f1ff;
+  font-size: 0.73rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.meta {
+  color: rgba(228, 236, 247, 0.64);
+  font-size: 0.84rem;
+}
+
+.logoutButton {
+  margin-top: 0.15rem;
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(164, 180, 206, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f5f8ff;
+  font-weight: 700;
+}
+
+.logoutButton:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 1180px) {
+  .shell {
+    width: 100%;
+  }
+}

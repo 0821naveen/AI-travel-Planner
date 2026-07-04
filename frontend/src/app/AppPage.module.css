@@ -1,0 +1,589 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heroBanner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  min-height: 252px;
+  display: grid;
+  align-items: end;
+  padding: 1.5rem;
+  color: #fff9f1;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 24px 46px rgba(29, 51, 57, 0.16);
+}
+
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(18, 52, 59, 0.06), rgba(18, 52, 59, 0.72)),
+    linear-gradient(90deg, rgba(18, 52, 59, 0.66), rgba(18, 52, 59, 0.2));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 760px;
+}
+
+.heroEyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.32rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(255, 248, 235, 0.16);
+  border: 1px solid rgba(255, 248, 235, 0.26);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-size: clamp(1.9rem, 4vw, 3.05rem);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+}
+
+.heroText {
+  max-width: 58ch;
+  color: rgba(255, 249, 241, 0.86);
+  font-size: 1rem;
+}
+
+.heroStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+.heroStat {
+  min-width: 130px;
+  padding: 0.8rem 0.9rem;
+  border-radius: 18px;
+  background: rgba(255, 251, 245, 0.14);
+  border: 1px solid rgba(255, 251, 245, 0.16);
+  backdrop-filter: blur(10px);
+}
+
+.heroStat strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.heroStat span {
+  display: block;
+  margin-top: 0.2rem;
+  color: rgba(255, 249, 241, 0.74);
+  font-size: 0.82rem;
+}
+
+.visualStrip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.imageTile {
+  position: relative;
+  min-height: 188px;
+  overflow: hidden;
+  border-radius: 22px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 18px 34px rgba(29, 51, 57, 0.12);
+}
+
+.imageTile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(17, 51, 57, 0.08), rgba(17, 51, 57, 0.72));
+}
+
+.imageTileContent {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  padding: 1rem;
+  color: #fffaf2;
+}
+
+.imageTileLabel {
+  display: inline-flex;
+  margin-bottom: 0.45rem;
+  padding: 0.28rem 0.56rem;
+  border-radius: 999px;
+  background: rgba(255, 249, 241, 0.16);
+  border: 1px solid rgba(255, 249, 241, 0.18);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.imageTileTitle {
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.imageTileText {
+  margin-top: 0.25rem;
+  color: rgba(255, 249, 241, 0.78);
+  font-size: 0.88rem;
+}
+
+.row {
+  display: grid;
+  gap: 1rem;
+}
+
+.row2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.reviewSplit {
+  grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.95fr);
+}
+
+.row3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.row4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.mainSidebar {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 1rem;
+}
+
+.triptych {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr) minmax(220px, 1fr);
+  gap: 1rem;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: inherit;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.titleIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(46, 111, 149, 0.12), rgba(223, 175, 108, 0.18));
+  border: 1px solid rgba(46, 111, 149, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42);
+  color: #204d65;
+  flex-shrink: 0;
+}
+
+.titleIcon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.placeholder {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.detailCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface-strong);
+}
+
+.detailLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.detailQuestion {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.detailReason {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.detailLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.55rem;
+}
+
+.actionLink {
+  color: var(--accent);
+  font-size: 0.88rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.actionLink:hover {
+  text-decoration: underline;
+}
+
+.metricValue {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.metricRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metricLabel {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding-bottom: 0.75rem;
+}
+
+.table td {
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.kvList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.kvList div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.chip {
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  font-size: 0.82rem;
+}
+
+.inlineActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.progressTrack {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  margin-top: 0.85rem;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, rgba(46, 111, 149, 0.82), rgba(223, 175, 108, 0.52));
+}
+
+.missingList,
+.readinessList,
+.infoList {
+  margin: 0.85rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.readinessSummary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.okDot,
+.pendingDot {
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 999px;
+  margin-right: 0.55rem;
+}
+
+.okDot {
+  background: #668c67;
+}
+
+.pendingDot {
+  background: #dfa460;
+}
+
+.okText {
+  color: #547b56;
+}
+
+.saveNotice {
+  color: var(--muted);
+}
+
+.errorText {
+  color: #b75757;
+}
+
+.stackTight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chatShell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top right, rgba(223, 175, 108, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(248, 245, 238, 0.82), rgba(245, 241, 232, 0.96));
+  border: 1px solid rgba(46, 111, 149, 0.12);
+}
+
+.chatBubble {
+  max-width: 86%;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  line-height: 1.55;
+  border: 1px solid var(--border);
+}
+
+.chatBubbleAgent {
+  align-self: flex-start;
+  background: rgba(255, 252, 247, 0.92);
+}
+
+.chatBubbleUser {
+  align-self: flex-end;
+  background: rgba(46, 111, 149, 0.12);
+  border-color: rgba(46, 111, 149, 0.22);
+}
+
+.optionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.optionButton {
+  justify-content: flex-start;
+  text-align: left;
+  min-height: 56px;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  background: rgba(255, 250, 242, 0.9);
+  border: 1px solid rgba(46, 111, 149, 0.14);
+}
+
+.optionButton:hover:not(:disabled) {
+  border-color: rgba(46, 111, 149, 0.32);
+  transform: translateY(-1px);
+}
+
+.inputRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.signalLabel {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.signalBody {
+  color: inherit;
+  line-height: 1.6;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.workflowActions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.workflowActions button {
+  width: 100%;
+  min-height: 54px;
+  white-space: normal;
+  text-align: center;
+  justify-content: center;
+}
+
+.stickyActions {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.primary {
+  background: linear-gradient(180deg, rgba(46, 111, 149, 0.94), rgba(30, 84, 114, 0.96));
+  border-color: rgba(46, 111, 149, 0.88);
+  color: #f8fbfd;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .visualStrip {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .row4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .triptych {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mainSidebar {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 780px) {
+  .row2,
+  .row3,
+  .row4 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .optionGrid,
+  .inputRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workflowActions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .actions,
+  .stickyActions {
+    flex-direction: column;
+  }
+}

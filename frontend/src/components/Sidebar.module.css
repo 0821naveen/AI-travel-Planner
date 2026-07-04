@@ -1,0 +1,237 @@
+.sidebar {
+  width: 304px;
+  padding: 0;
+  position: relative;
+  transition: width 0.24s ease, padding 0.24s ease;
+}
+
+.panel {
+  min-height: 100vh;
+  border-radius: 0 28px 28px 0;
+  padding: 1.3rem 1rem 1rem;
+  background:
+    linear-gradient(180deg, rgba(21, 29, 42, 0.98), rgba(15, 22, 33, 0.98)),
+    #111723;
+  border-right: 1px solid rgba(195, 210, 235, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    18px 0 44px rgba(5, 9, 16, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.collapsed {
+  width: 108px;
+}
+
+.collapsed .panel {
+  border-radius: 0 24px 24px 0;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  align-items: center;
+}
+
+.topRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(169, 184, 208, 0.14);
+}
+
+.profileMeta {
+  margin-top: 0.18rem;
+  color: rgba(228, 236, 247, 0.64);
+  font-size: 0.82rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(164, 180, 206, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(248, 250, 255, 0.86);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 10px 24px rgba(2, 6, 14, 0.22);
+}
+
+.toggle:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(164, 180, 206, 0.18);
+}
+
+.toggle svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  min-height: 0;
+}
+
+.navSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.sectionLabel {
+  padding: 0 0.45rem;
+  color: rgba(228, 236, 247, 0.42);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.82rem 0.8rem;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  color: rgba(232, 239, 248, 0.72);
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navLink:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(164, 180, 206, 0.1);
+  transform: translateX(2px);
+}
+
+.navIcon {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.navIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.navText {
+  white-space: nowrap;
+}
+
+.active {
+  background: linear-gradient(90deg, rgba(72, 77, 102, 0.84), rgba(53, 57, 77, 0.76));
+  border-color: rgba(167, 175, 219, 0.14);
+  color: #ffffff;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.collapsed .topRow {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.collapsed .brandCopy,
+.collapsed .sectionLabel,
+.collapsed .navText,
+.collapsed .profileCard {
+  display: none;
+}
+
+.collapsed .nav {
+  width: 100%;
+  margin-top: 0.3rem;
+  align-items: center;
+}
+
+.collapsed .navSection,
+.collapsed .navList {
+  width: 100%;
+  align-items: center;
+}
+
+.collapsed .navLink {
+  width: 58px;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 18px;
+}
+
+@media (max-width: 960px) {
+  .sidebar {
+    width: 92px;
+  }
+
+  .panel {
+    min-height: 100vh;
+    border-radius: 0 22px 22px 0;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .topRow {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brandCopy,
+  .sectionLabel,
+  .navText,
+  .profileCard {
+    display: none;
+  }
+
+  .nav {
+    width: 100%;
+    align-items: center;
+  }
+
+  .navSection,
+  .navList {
+    width: 100%;
+    align-items: center;
+  }
+
+  .navLink {
+    width: 58px;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
