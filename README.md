@@ -11,12 +11,15 @@ It is built as an agentic workflow, but the experience is meant to stay simple: 
 
 ## Demo
 
-- [Watch the walkthrough on YouTube](https://youtu.be/gEozE2vdums)
-- [Direct MP4 backup](https://raw.githubusercontent.com/0821naveen/AI-travel-Planner/main/docs/assets/beyond-the-prompt-project-walkthrough.mp4)
 
-<video src="https://raw.githubusercontent.com/0821naveen/AI-travel-Planner/main/docs/assets/beyond-the-prompt-project-walkthrough.mp4" controls width="960">
-  Your browser does not support the video tag.
-</video>
+
+
+https://github.com/user-attachments/assets/6317b7c9-a526-4142-ab7a-5136f1721858
+
+
+
+
+
 
 ## What It Is
 
