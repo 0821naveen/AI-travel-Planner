@@ -16,9 +16,10 @@ Those materials reinforce the same design message visible in this repo: an LLM i
 
 ## Project Walkthrough Video
 
-- [Project walkthrough video](docs/assets/beyond-the-prompt-project-walkthrough.mp4)
+- [Watch the project walkthrough on YouTube](https://youtu.be/gEozE2vdums)
+- [Repo-hosted MP4 copy](docs/assets/beyond-the-prompt-project-walkthrough.mp4)
 
-The video file is committed into the repo at `docs/assets/beyond-the-prompt-project-walkthrough.mp4`.
+The YouTube link is the easiest way to view the walkthrough. A repo-hosted MP4 copy is also committed at `docs/assets/beyond-the-prompt-project-walkthrough.mp4`.
 
 ## What The Project Does
 
