@@ -9,16 +9,10 @@ AI Travel Planner turns a rough travel idea into a structured trip plan with:
 
 It is built as an agentic workflow, but the experience is meant to stay simple: give the user a useful plan, not a wall of AI output.
 
-## Demo
+## Travel Planner Architecture
 
 
-
-
-https://github.com/user-attachments/assets/6317b7c9-a526-4142-ab7a-5136f1721858
-
-
-
-
+https://github.com/user-attachments/assets/7e829083-217d-41b4-b140-54edd75654da
 
 
 ## What It Is
@@ -180,15 +174,4 @@ What it does well:
 - support for both sync and async execution
 - production-minded pieces like audit trails, job tracking, and persistence
 
-## Good Entry Points
 
-- [backend/src/main.py](/Users/naveen.kumar.p/Documents/github control automation/AI-travel-Planner/backend/src/main.py)
-- [backend/src/api/main.py](/Users/naveen.kumar.p/Documents/github control automation/AI-travel-Planner/backend/src/api/main.py)
-- [backend/src/agents/travel_planner/graph.py](/Users/naveen.kumar.p/Documents/github control automation/AI-travel-Planner/backend/src/agents/travel_planner/graph.py)
-- [docker-compose.yml](/Users/naveen.kumar.p/Documents/github control automation/AI-travel-Planner/docker-compose.yml)
-- [docs/architecture.md](/Users/naveen.kumar.p/Documents/github control automation/AI-travel-Planner/docs/architecture.md)
-- [docs/true-multi-agent-architecture.md](/Users/naveen.kumar.p/Documents/github control automation/AI-travel-Planner/docs/true-multi-agent-architecture.md)
-
-## License
-
-See [LICENSE](/Users/naveen.kumar.p/Documents/github control automation/AI-travel-Planner/LICENSE).
